@@ -1,31 +1,29 @@
-const ball = document.querySelector(".ball");
-
-ball.addEventListener("mousedown", function (event) {
-  function move(pageX, pageY) {
-    ball.style.left = pageX - ball.offsetWidth / 200 + "px";
-    ball.style.top = pageY - ball.offsetHeight / 200 + "px";
-  }
-
-  move(event.pageX, event.pageY);
-
-  function onMouseMove(event) {
-    move(event.pageX, event.pageY);
-  }
-
-  document.addEventListener("mousemove", onMouseMove);
-
-  document.addEventListener("mouseup", function mouseUp() {
-    document.removeEventListener("mousemove", onMouseMove);
-    document.removeEventListener("mouseup", mouseUp);
-  });
-});
-
-ball.ondragstart = function () {
-  return false;
-};
+// -----1----
+// Напишіть такий JavaScript, щоб після натискання на кнопку button, елемент
+// <div id="text"> зникав.
+// const btn = document.querySelector("#text");
+// btn.addEventListener('click', () => {
+//     btn.remove();
+//  });
 
 
+// -----2----
+// Напишіть такий код, щоб після натискання на кнопку, вона зникала.
 
+// const btn = document.querySelector(".button");
+// btn.addEventListener('click', () => {
+//     btn.remove();
+//  });
+// -----3----
+// Створіть дерево, яке показує/приховує дочірні вузли при кліці
+
+// const nav = document.querySelector('.shop');
+// const shopList = document.querySelector(".shop-list");
+
+// nav.addEventListener("click", handleClick);
+// function handleClick() {
+//     shopList.classList.toggle("hidden")
+// }
 
 
 
@@ -34,9 +32,21 @@ ball.ondragstart = function () {
 
 
 
+// const nav = document.querySelector(".nav");
 
+// nav.addEventListener("click", handleClick);
 
+// function handleClick(event) {
+//     const clickedItem = event.target.closest("li");
 
+//     if (!clickedItem) return;     
+ 
+//     if (clickedItem.classList.contains("active")) {          //мы навесили активный класс там где его нет и удаляем где он есть и все это при клике 
+//         clickedItem.classList.remove("active"); 
+//     } else {
+//         clickedItem.classList.add("active");
+//     }
+// }
 
 
 
@@ -244,14 +254,3 @@ ball.ondragstart = function () {
 
 
 
-
-// function convertParsecs(parsecs) {
-
-//     if (parsecs % 2 === 0 ) {
-//         return parsecs * 3;
-//     } else {
-//         return parsecs * 2;
-        
-//     }
-  
-//   }
