@@ -29,6 +29,28 @@
 
 
 
+const ball = document.querySelector(".ball");
+
+
+
+ball.onmousedown = function (event) {
+    function move(pageX, pageY) {
+        ball.style.left = pageX - ball.offsewidth / 2 + "px";
+        ball.style.top = pagerY - ball.offseWidth / 2 + "px";
+    }
+    move(event.pageX, event.pageY);
+
+    function onMouseMove(event) {
+        move(event.pageX, event.pageY);
+    }
+    document.addEventListener("mousemove", onMouseMove);
+
+}
+
+
+
+
+
 
 
 
@@ -53,16 +75,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 // const btn1 = document.querySelector("#btn1");
 // const btn2 = document.querySelector("#btn2");
 // const btn3 = document.querySelector("#btn3");
@@ -79,6 +91,7 @@
 //  const btn6 = document.querySelector("#btn6");
 
 // btn6 .addEventListener("keydown", () => console.log("keydown"));
+
 
 
 // const addBtn = document.querySelector("#add");
