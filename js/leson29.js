@@ -35,8 +35,8 @@ const ball = document.querySelector(".ball");
 
 ball.onmousedown = function (event) {
     function move(pageX, pageY) {
-        ball.style.left = pageX - ball.offsewidth / 2 + "px";
-        ball.style.top = pagerY - ball.offseWidth / 2 + "px";
+        ball.style.left = pageX - ball.offseWidth / 2 + "px";
+        ball.style.top = pageY - ball.offsetHeight / 2 + "px";
     }
     move(event.pageX, event.pageY);
 
