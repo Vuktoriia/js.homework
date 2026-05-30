@@ -29,23 +29,23 @@
 
 
 
-const ball = document.querySelector(".ball");
+// const ball = document.querySelector(".ball");
 
 
 
-ball.onmousedown = function (event) {
-    function move(pageX, pageY) {
-        ball.style.left = pageX - ball.offseWidth / 2 + "px";
-        ball.style.top = pageY - ball.offsetHeight / 2 + "px";
-    }
-    move(event.pageX, event.pageY);
+// ball.onmousedown = function (event) {
+//     function move(pageX, pageY) {
+//         ball.style.left = pageX - ball.offsetWidth / 2 + "px";
+//         ball.style.top = pageY - ball.offsetHeight / 2 + "px";
+//     }
+//     move(event.pageX, event.pageY);
 
-    function onMouseMove(event) {
-        move(event.pageX, event.pageY);
-    }
-    document.addEventListener("mousemove", onMouseMove);
+//     function onMouseMove(event) {
+//         move(event.pageX, event.pageY);
+//     }
+//     document.addEventListener("mousemove", onMouseMove);
 
-}
+// }
 
 
 
@@ -263,7 +263,6 @@ ball.onmousedown = function (event) {
 //       return "Good night";
 //     }
 //   }
-
 
 
 
