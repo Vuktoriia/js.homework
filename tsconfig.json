@@ -4,7 +4,8 @@
     "module": "es6",
     "rootDir": "./js",
     "outDir": "./dist",
-    "strict": true
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["js/**/*.ts"],
   "exclude": ["dist", "node_modules"]
